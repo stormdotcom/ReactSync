@@ -1,7 +1,13 @@
+// PresenceIndicator.js
 import React from "react";
 
-const PresenceIndicator = () => {
-  return <div>PresenceIndicator</div>;
-};
+function PresenceIndicator({ user, online }) {
+  return (
+    <div className={`presence-indicator ${online ? "online" : "offline"}`}>
+      <div className="status-circle" />
+      <span>{user.name}</span>
+    </div>
+  );
+}
 
 export default PresenceIndicator;
